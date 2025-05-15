@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50;
+  }
+}
+
+@layer components {
+  /* Range input styles */
+  input[type="range"] {
+    @apply w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    @apply appearance-none w-6 h-6 bg-blue-600 rounded-full cursor-pointer hover:bg-blue-700 transition-colors duration-200;
+  }
+
+  /* Radio button styles */
+  input[type="radio"] {
+    @apply w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 cursor-pointer;
+  }
+
+  /* Question container styles */
+  .question-container {
+    @apply mb-8 p-6 bg-white rounded-xl shadow-md;
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow-md 
+           hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 
+           focus:ring-opacity-50 transition duration-200;
+  }
+
+  .btn-primary:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+}
